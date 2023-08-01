@@ -4,8 +4,6 @@
 
 Forked from here: https://github.com/statsig-io/statsigstatus
 
-
-- https://status.statsig.com
 - https://status.trendii.com
 
 ## Setup instructions

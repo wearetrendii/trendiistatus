@@ -3,7 +3,7 @@
 # later upstream merges messy for anyone who forked us.
 commit=true
 origin=$(git remote get-url origin)
-if [[ $origin == *statsig-io/statuspage* ]]
+if [[ $origin == *wearetrendii/trendiistatus* ]]
 then
   commit=false
 fi
@@ -35,6 +35,7 @@ do
   
   for i in 1 2 3 4; 
   do
+    echo "Attempting health check for $key (Attempt $i)"
     cmd="curl --write-out '%{http_code}' --silent --output /dev/null $args"
     response=$(eval "$cmd" | tee)
     if [ "$response" -eq 200 ] || [ "$response" -eq 202 ] || [ "$response" -eq 301 ] || [ "$response" -eq 307 ]; then
@@ -42,6 +43,7 @@ do
     else
       result="failed"
     fi
+    echo "Health check for $key: $result (Response Code: $response)"
     if [ "$result" = "success" ]; then
       break
     fi

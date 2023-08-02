@@ -62,7 +62,7 @@ done
 
 if [[ $commit == true ]]
 then
-  # Let's make Vijaye the most productive person on GitHub.
+  echo "Pushing health check logs to remote repository"
   git config --global user.name 'Michael Carter'
   git config --global user.email 'michael@trendii.com'
   git add -A --force logs/

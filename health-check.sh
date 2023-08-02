@@ -2,11 +2,12 @@
 # without committing. This avoids generating several commits that would make
 # later upstream merges messy for anyone who forked us.
 commit=true
-origin=$(git remote get-url origin)
-if [[ $origin == *wearetrendii/trendiistatus* ]]
-then
-  commit=false
-fi
+# FOR TESTING LOCALLY
+# origin=$(git remote get-url origin)
+# if [[ $origin == *wearetrendii/trendiistatus* ]]
+# then
+#   commit=false
+# fi
 
 KEYSARRAY=()
 COMMAND_ARGS=()

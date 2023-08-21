@@ -263,6 +263,9 @@ async function genAllReports() {
   }
 }
 
+
+// NOT IMPLEMENTED AT TRENDII
+// TODO incident reports
 async function genIncidentReport() {
   const response = await fetch(
     "https://incidents.statsig.workers.dev/contents"
